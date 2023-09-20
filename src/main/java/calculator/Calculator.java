@@ -17,7 +17,7 @@ public class Calculator {
             String[] romeNum = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
             List<String> romeNumbers = new ArrayList<>(Arrays.asList(romeNum));
             List<String> arabNumbers = new ArrayList<>();
-            for (int i = 0; i < 11; i++) arabNumbers.add(String.valueOf(i));
+            for (int i = 0; i < 10; i++) arabNumbers.add(String.valueOf(i));
 
             if (romeNumbers.contains(number1) && romeNumbers.contains(number2) && (splitString.length < 4)) {
                 int num1 = NumeralConverter.fromRomanNumeral(splitString[0]);
