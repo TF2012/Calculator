@@ -20,14 +20,14 @@ public class Calculator {
             for (int i = 0; i < 10; i++) arabNumbers.add(String.valueOf(i));
 
             if (romeNumbers.contains(number1) && romeNumbers.contains(number2) && (splitString.length < 4)) {
-                int num1 = NumeralConverter.fromRomanNumeral(splitString[0]);
-                int num2 = NumeralConverter.fromRomanNumeral(splitString[2]);
+                int num1 = NumeralConverter.fromRomanNumeral(number1);
+                int num2 = NumeralConverter.fromRomanNumeral(number2);
                 int result = calc(num1, num2, operation);
                 if ((result < 1)) throw new Exception();
                 String answer = NumeralConverter.toRomanNumeral(result);
                 System.out.println(answer);
             } else if (arabNumbers.contains(number1) && arabNumbers.contains(number2) && (splitString.length < 4)) {
-                System.out.println(calc(Integer.parseInt(splitString[0]), Integer.parseInt(splitString[2]), operation));
+                System.out.println(calc(Integer.parseInt(number1), Integer.parseInt(number2), operation));
             } else {
                 throw new Exception();
             }
